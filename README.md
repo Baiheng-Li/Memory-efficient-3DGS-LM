@@ -2,8 +2,10 @@
 Project in the practical course "Advanced Deep Learning for Computer Vision" at TUM.
 
 This project is a memory-efficient version of 3DGS-LM (3D Gaussian Splatting with Levenberg-Marquardt). By replacing the ADAM optimizer with Levenberg-Marquardt, 3DGS-LM is 20% faster than the original 3DGS while obtaining the same reconstruction quality. More details of 3DGS-LM could be found [here](https://lukashoel.github.io/3DGS-LM/).
+
 Even though LM achieves faster convergence, it introduces a memory bottleneck. Our project reduces the used memory by sampling while preseving reconstruction quality. 
 The theoretical formulation of [Semi-stochastic Newton-CG (SSNCG)](https://optimization-online.org/wp-content/uploads/2010/06/2657.pdf) suggests the use of sampling. In this project we explore this idea empirically, while the relationship between sampling rates/strategies and performance remains an interesting topic for further study.
+
 The [report](scripts/Memory-efficient%20Second-order%20Gaussian%20Splatting%20Optimization.pdf) of this project contains some quantitative and qualitative results.
 # 3DGS-LM Sampling Modules Documentation
 
